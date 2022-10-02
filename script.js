@@ -7,7 +7,7 @@ const options = {
 		'X-RapidAPI-Host': 'facebook-reel-and-video-downloader.p.rapidapi.com'
 	}
 };
-let test;
+let test = true;
 //https%3A%2F%2Fwww.facebook.com%2Freel%2F1187362698778788
 
 
