@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alkalami&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@300&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -6,21 +9,38 @@
 
 .app{
     width: 100vw;
-    max-width: 25rem;
-    background-color: blue;
+    max-width: 36rem;
+    background-color: #4F8AF7;
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding: 1rem;
+    padding: 2rem;
+    direction: rtl;
+}
+.app .logo{
+    font-family: 'Alkalami', serif;
+    font-size: 3rem;
+    color: #fff;
+}
+.app .logo span{
+    font-family: 'Bungee Spice', cursive;
 }
 
-h2{
-    color: #fff;
-    font-size: 1.4rem;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin: 2rem 0;
+header{
+    margin-top: 10px;
+}
+
+header h2{
+    color: blue;
+    font-size: 1.8rem;
+    font-family: 'Alkalami', serif;
+    
+}
+header p{
+    font-family: 'Noto Kufi Arabic', sans-serif;
+    color: #ccc;
 }
 
 a{
@@ -28,11 +48,12 @@ a{
     text-decoration: none;
     font-size: 1.3rem;
     margin: 2rem 0;
-    color: blue;
-    background-color: #fff;
-    padding: .4rem 2rem;
+    color: #3947D4;
+    background-color: orangered;
+    padding: .4rem 3rem;
     border-radius: 20px;
     transition: .3s linear;
+    font-family: 'Noto Kufi Arabic', sans-serif;
 }
 a:hover{
     background-color: #fff;
@@ -41,6 +62,23 @@ a:hover{
 }
 
 input{
-    padding: .4rem 1.5rem;
+    padding: 8px 12px;
+    outline: none;
+    border: 1px solid orangered;
+    border-radius: 10px;
     width: 100%;
+    font-family: 'Noto Kufi Arabic', sans-serif;
+    font-size: 1.2rem;
+    margin: 16px 0;
+}
+
+input::placeholder{
+    color: orangered;
+    font-size: 16px;
+}
+
+.msg{
+    color: red;
+    font-size: 20px;
+    margin-top: 15px;
 }

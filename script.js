@@ -7,6 +7,7 @@ const options = {
 		'X-RapidAPI-Host': 'facebook-reel-and-video-downloader.p.rapidapi.com'
 	}
 };
+let test;
 //https%3A%2F%2Fwww.facebook.com%2Freel%2F1187362698778788
 
 
@@ -21,11 +22,19 @@ input.addEventListener('change', function(){
 	.then(response => response.json())
 	.then(data => {
         const {links} = data;
-        
         link.href = links["Download High Quality"];
-        console.log(document.querySelector('.link'));
+        
     })
-    .catch(err => console.error(err))
-    .finally(() => link.style.display = 'block')
+    .catch(err => {
+        let msg = document.createElement('p');
+        msg.innerText = 'من فضلك تأكد من رابط';
+        msg.setAttribute('class', 'msg')
+        document.querySelector('.app').append(msg);
+        test = false;
+        return -1;
+    })
+    .finally(() => {
+        if(test) link.style.display = 'block';
+    })
 })
 
